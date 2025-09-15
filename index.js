@@ -302,7 +302,7 @@
         }
     }
 
-    console.log(numArr);
+    console.log(numArr); 
 
 */
 
@@ -310,85 +310,79 @@
 1. Write a program that checks if a number is even or odd using if-else. Return 'Odd' if the number is odd and 'Even' otherwise.
 */
 
-    function numIdentify(num1) {
-        if (num1 % 2 == 0) {
-            console.log(`${num1} is an Even Number`);
+    // function numIdentify(num1) {
+    //     if (num1 % 2 == 0) {
+    //         console.log(`${num1} is an Even Number`);
         
-        } else {
-            console.log(`${num1} is an Odd Number`);
-        }
-    }
+    //     } else {
+    //         console.log(`${num1} is an Odd Number`);
+    //     }
+    // }
 
-    numIdentify(15);
+    // numIdentify(20);
 
 /*
 2. Write a program that checks if a number is positive, negative, or zero using if-else. Return 'Positive' for a positive number, 'Negative' for a negative number, and 'Zero' for zero.
 Clue: Look up the Math function that returns the sign of a number
 */
 
-    function checkNumber(num2) {
-        let sign = Math.sign(num2);
+    // function checkNumber(num2) {
+    //     let sign = Math.sign(num2);
 
-        if (sign == 1) {
-            return `${num2} is a Positive Number`;
+    //     if (sign == 1) {
+    //         return `${num2} is a Positive Number`;
 
-        } else if (sign == -1) {
-            return `${num2} is a Negative Number`;
+    //     } else if (sign == -1) {
+    //         return `${num2} is a Negative Number`;
 
-        } else {
-            return `${num2} is Zero`;
-        }
-    }
+    //     } else {
+    //         return `${num2} is Zero`;
+    //     }
+    // }
 
-    checkNumber(0)
+    // console.log(checkNumber(-100));
 
 /*
 3. Create a program that categorizes an age input. Using a ternary operator, return 'Adult' for ages 18+ or 'Minor' otherwise.
 */
 
-    function categorizeAge(age) {
-        if (age < 0) {
-            return 'Invalid age';
-        } else if (age >= 18) {
-            return 'Adult';
-        } else {
-            return 'Minor';
-        }
-    }
+    // function categorizeAge(age) {
+    //     return age >= 18 ? 'Adult' : 'Minor';
+    // }
 
-    console.log(categorizeAge(15));
+    // console.log(categorizeAge(20));
 
 /*
 4. Use a for loop to print all the numbers from 1 to 50.
 */
 
-    for (let i = 1; i <= 50; i++) {
-    console.log(i);
-    }
+    // for (let i = 1; i <= 50; i++) {
+    // console.log(i);
+    // }
 
 /*
 5. Use a for loop to print all the numbers between 1 and 50 that are multiples of 3.
 */
 
-    for (let i = 1; i <= 50; i++) {
-        if (i % 3 == 0) {
-        console.log(i);
-        }
-    }
+    // for (let i = 1; i <= 50; i++) {
+    //     if (i % 3 == 0) {
+    //     console.log(i);
+    //     }
+    // }
 
 /*
 6. Use a for loop that finds the sum of all even numbers between 1 and 100.
 */
 
-    let sum = 0;
+    // let sum = 0;
 
-    for (let i = 1; i <= 100; i++) {
-        if (i % 2 == 0) {
-            sum += i;
-        }
-    }
+    // for (let i = 1; i <= 100; i++) {
+    //     if (i % 2 == 0) {
+    //         sum += i;
+    //     }
+    // }
 
-    console.log(sum);
+    // console.log(sum);
 
 /*
 7. Use a for loop from 1 - 50;
@@ -398,37 +392,36 @@ Clue: Look up the Math function that returns the sign of a number
     - Otherwise, print the number
 */
 
-    for (let i = 1; i <= 50; i++) {
-        if (i % 3 == 0) {
-        console.log("Fizz");
-        }
-        else if (i % 5 == 0) {
-        console.log("Buzz");
-        }
-        else if (i % 3 == 0 && i % 5 == 0)
-        console.log("FizzBuzz");
-        else {
-        console.log(i)
-        }
-    }
+    // for (let i = 1; i <= 50; i++) {
+    //     if (i % 3 == 0 && i % 5 == 0)
+    //         console.log("FizzBuzz");
+    //     else if (i % 3 == 0) {
+    //     console.log("Fizz");
+    //     }
+    //     else if (i % 5 == 0) {
+    //     console.log("Buzz");
+    //     } else {
+    //     console.log(i)
+    //     }
+    // }
 
 /*
 8. Create a program that validates a year if it's a leap year or not.
 */
 
-    function isLeapYear(year) {
-        if (year % 400 == 0) {
-            return `${year} is a Leap Year`;
-        } else if (year % 100 == 0) {
-            return `${year} is NOT a Leap Year`;
-        } else if (year % 4 == 0) {
-            return `${year} is a Leap Year`;
-        } else {
-            return `${year} is NOT a Leap Year`;
-        }
-    }
+    // function isLeapYear(year) {
+    //     if (year % 400 == 0) {
+    //         return `${year} is a Leap Year`;
+    //     } else if (year % 100 == 0) {
+    //         return `${year} is NOT a Leap Year`;
+    //     } else if (year % 4 == 0) {
+    //         return `${year} is a Leap Year`;
+    //     } else {
+    //         return `${year} is NOT a Leap Year`;
+    //     }
+    // }
 
-    console.log(isLeapYear(2025));
+    // console.log(isLeapYear(2019));
 
 /*
 9. Using a switch-case statement, write a program that takes a score (0 - 100) and prints:
@@ -439,47 +432,58 @@ Clue: Look up the Math function that returns the sign of a number
     - "F" if below 60
 */
 
-    function getGrade(score) {
-        let grade;
+    // function getGrade(score) {
+    //     let grade;
 
-        switch (true) {
-            case (score >= 90 && score <= 100):
-                grade = "A";
-                break;
-            case (score >= 80 && score <= 89):
-                grade = "B";
-                break;
-            case (score >= 70 && score <= 79):
-                grade = "C";
-                break;
-            case (score >= 60 && score <= 69):
-                grade = "D";
-                break;
-            case (score >= 0 && score < 60):
-                grade = "F";
-                break;
-            default:
-                grade = "Invalid";
-        }
+    //     switch (true) {
+    //         case (score >= 90 && score <= 100):
+    //             grade = "A";
+    //             break;
+    //         case (score >= 80 && score <= 89):
+    //             grade = "B";
+    //             break;
+    //         case (score >= 70 && score <= 79):
+    //             grade = "C";
+    //             break;
+    //         case (score >= 60 && score <= 69):
+    //             grade = "D";
+    //             break;
+    //         case (score >= 0 && score < 60):
+    //             grade = "F";
+    //             break;
+    //         default:
+    //             grade = "Invalid";
+    //     }
 
-        console.log(`Your score is ${score}. Your Grade is ${grade}.`);
-    }
+    //     console.log(`Your score is ${score}. Your Grade is ${grade}.`);
+    // }
 
-    getGrade(-1);
+    // getGrade(60);
 
 /*
 10. Write a program using a for loop that counts how many vowels are in a given string.
 */
 
-    function countVowels(str) {
-        let count = 0;
+    // function countVowels(str) {
+    //     str = str.toLowerCase();
 
-        for (let i = 0; i < str.length; i++) {
-        }
+    //     const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-        console.log(count)
-    }
-    countVowels("anselle");  //XXXXXXX
+    //     let counter = 0;
+        
+    //     for (let i = 0; i <= str.length - 1; i++) {
+            
+    //         for (let j = 0; j <= vowels.length - 1; j++) {
+    //             if (str[i] == vowels[j]) {
+    //                 counter++;  
+    //             }
+    //         }
+            
+    //     }
+    //     return counter;
+    // }
+    
+    // console.log(countVowels("ANSELLE KRISTINE CALALUAN")); 
 
 /*
 11. Palindrome Checker - A palindrome is a word, phrase, number, or sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
@@ -496,35 +500,54 @@ Some palindrome words:
     - 12321
 */
 
-    function isPalindrome(input){
-        stringInput = input.toString();
-        stringInput.toLowercase()
+    // function isPalindrome(input){
 
-    }
+    //     // Modifying input
 
+    //     let finalInput = '';
+    //     let reversedWord = '';
+
+    //     const cleanInput = input.split(' ');
+
+    //     for (let i = 0; i < cleanInput.length; i++) {
+    //         finalInput += cleanInput[i];
+    //     }
+
+    //     // Where reversing happens
+    //     for (let i = finalInput.length - 1; i >= 0; i--) {
+    //         reversedWord += finalInput[i];
+    //     }
+
+    //     return finalInput.toLowerCase() == reversedWord.toLowerCase() ? `${input} is a PALINDROME` : `${input} is NOT A PALINDROME`
+
+    // }
+
+    // console.log(isPalindrome("Never odd or even"));
 
 /*
 12. Print a reverse countdown from 10 to 1.
 */
 
-    for (let i = 10; i >= 1; i--) {
-        console.log(i);
-    }
+    // for (let i = 10; i >= 1; i--) {
+    //     console.log(i);
+    // }
 
 /*
 13. Write a program that finds the factorial of a number using a for loop.
 */
 
     // function factorial(num) {
-    //     let result = hehehe;
+    //     let result = 1;
 
     //     for (let i = 1; i <= num; i++) {
+    //         result *= i;
     //     }
 
     //     console.log(`Factorial of ${num} is:  ${result}`);
+
     // }
 
-    // factorial(5); // XXXXXXXX
+    // factorial(5);
 
 
 /*
@@ -540,10 +563,19 @@ Clue:
 */
 
     // function fibonacciSequence(n) {
-    //     let fib = [0, 1];
+    //     let fib = [];
+    //     let term;
 
-    //     for (let i = 2; i < n; i++) {
-    //         ..
+    //     for (let i = 0; i < n; i++) {
+
+    //         if (i == 0 || i == 1) {
+    //             fib.push(i);
+
+    //         } else {
+    //             term = fib[i - 2] + fib[i - 1];
+    //             fib.push(term);
+
+    //         } 
     //     }
     //     console.log(fib);
     // }
@@ -554,15 +586,244 @@ Clue:
 15. Using a for loop get the sum of the first 10 terms of the Fibonacci Sequence.
 */
 
-    // function sumFibonacci(n) {
-    //     let fib = [0, 1];
+    // function fibonacciSequence(n) {
+    //     let fib = [];
+    //     let term;
     //     let sum = 0;
 
-    //     for (let i = 1; i < 10; i++) {
-    //         ..
+    //     for (let i = 0; i < n; i++) {
+
+    //         if (i == 0 || i == 1) {
+    //             fib.push(i);
+
+    //         } else {
+    //             term = fib[i - 2] + fib[i - 1];
+    //             fib.push(term);
+
+    //         } 
+    //     }
+
+    //     for (let i = 0; i < fib.length; i++) {
+            
+    //         sum += fib[i];
     //     }
 
     //     console.log(sum);
     // }
 
-    // sumFibonacci(10);
+    // fibonacciSequence(4);
+
+/*
+16. Using for loop, between the numbers 1 and 50, print the numbers 11, 32, 17, 25, 46, 50.
+*/
+
+
+    // for (let i = 1; i <= 50; i++) {
+    //     if (i == 11) {
+    //         console.log(i);
+    //     } 
+    //     else if (i == 32) {
+    //         console.log(i);
+    //     }
+    //     else if (i == 17) {
+    //         console.log(i);
+    //     }
+    //     else if (i == 25) {
+    //         console.log(i);
+    //     }
+    //     else if (i == 46) {
+    //         console.log(i);
+    //     }
+    //     else if (i == 50) {
+    //         console.log(i);
+    //     } else {
+    //         continue;
+    //     }
+    //     console.log(i);
+    // }
+
+/*
+17. Print the multiplication table of 7.
+*/
+
+    // for (let i = 1; i <= 10; i++) {
+    //     console.log(i * 7);
+    // }
+
+/*
+18. Print the squares of numbers from 1 to 15.
+*/
+
+    // for (let i = 1; i <= 15; i++) {
+    //     console.log(Math.pow(i,2))
+    // }
+
+/*
+19. Print numbers in reverse order (from 20 down to 1).
+*/
+
+    // for (let i = 20; i >= 1; i--) {
+    //     console.log(i)
+    // }
+
+/*
+20. Find the sum of all odd numbers between 1 and 50.
+*/
+
+    // let sum = 0;
+
+    // for (let i = 0; i <= 5; i++) {
+
+    //     if (i % 2 == 0) {
+    //         continue;
+    //     } else {
+    //         sum += i;
+    //     }
+    // }
+    // console.log(sum);
+
+/*
+    20. Count how many numbers between 1 and 100 are divisible by 3 and 5.
+*/
+
+    // let countNum = 0;
+
+    // for (let i = 2; i < 100; i++) {
+    //     if (i % 3 == 0 && i % 5 ==0 ){
+    //         countNum++;
+    //     }
+    // }
+    // console.log(countNum);
+
+
+/*
+21. Check if a given number is prime using a for loop.
+*/
+
+    // function checkPrime (num) {
+
+    //     if (num == 1){
+    //         return `${num} is not a Prime Number`;
+
+    //     } else if (num == 2){
+    //         return `${num} is a Prime Number`;
+
+    //     } else {
+    //         for (let i = 2; i < num; i++) {
+
+    //             if (num % i == 0) {
+    //                 return `${num} is not a Prime Number`;
+
+    //             } else {
+    //                 continue;
+    //             }
+    //         }
+    //         return `${num} is a Prime Number`; 
+    //     }
+    // }
+    // console.log(checkPrime(11));
+
+
+/*
+22. Print all the divisors of a given number
+*/
+
+    // function divOfNum (num) {
+
+    //     const divisors = [];
+
+    //     for (let i = 1; i <= num; i++) {
+    //         if (num % i == 0){
+    //             divisors.push(i);
+
+    //         } else {
+    //             continue;
+    //         }
+    //     }
+    //     return divisors;
+    // }
+    // console.log(divOfNum(1000));
+
+/*
+23. Get the first 20 multiples of 3 and store them in an array. 
+*/
+
+/*
+24. Make a program that prints all the characters of a string.
+*/
+
+/*
+25. Make a program that prints all the characters of a string in reverse.
+*/
+
+/*
+26. Find the largest digit in a number.
+Sample Input: 93794
+Output: 9
+Clue:
+    - Gawin munang string yung input para di magka-TypeError
+    - Need mo ng variable para maghold nung value ng largest number
+    - Then gamit ka ng string method para mapaghiwa-hiwalay yung mga digits
+    - For loop ka na, compare mo si current digit [i] dun sa nasa unahan niya [i + 1] :)
+*/
+
+/*
+27. Print numbers from 5 to 50, increasing by 5 each time.
+*/
+
+/*
+28. Print the squares of numbers from 6 to 10.
+*/
+
+/*
+29. Print this pattern of stars using for loop:
+
+*
+**
+***
+****
+*****
+
+*/
+
+/*
+30. Given a list of numbers [5, -2, 8, -1, 3, -7, 12], print only the positive numbers.
+*/
+
+/*
+31. Count how many grades in the list [85, 92, 78, 96, 88, 73, 89] are above 80.
+*/
+
+/*
+32. Create a simple password strength checker that counts how many of these criteria a password meets:
+    - At least 8 characters long
+    - Contains at least one uppercase letter
+    - Contains at least one lowercase letter
+    - Contains at least one digit
+    Note: Gagamit ata dito ng 'typeof'
+    Clue: Gawa ka ng three variables with boolean values if satisfied lahat ng conditions, print mo lang 'Strong password' if di naman, print mo lang yung criteria na di na-meet :)
+*/
+
+/*
+33. Convert a list of temperatures from Celsius to Fahrenheit: [0, 10, 20, 30, 40]. Add a condition to mark temperatures above 32°F as "Hot", below 0°F as "Freezing", and others as "Moderate".
+*/
+
+/*
+34. Count how many consonants are in the string "Hello World Programming".
+*/
+
+/*
+35. Given a list of ages [12, 25, 17, 45, 8, 33, 16], categorize and count them:
+
+    Children: under 13
+    Teens: 13-17
+    Adults: 18+
+*/
+
+/*
+36. From the list ["cat", "elephant", "dog", "butterfly", "ant"], print only words longer than 4 characters.
+*/
+
+/*
+37. Generate the first 15 Fibonacci numbers, but only print the even ones.
+*/
