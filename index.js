@@ -305,3 +305,92 @@
     console.log(numArr);
 
 */
+
+/*
+1. Write a program that checks if a number is even or odd using if-else. Return 'Odd' if the number is odd and 'Even' otherwise.
+*/
+
+/*
+2. Write a program that checks if a number is positive, negative, or zero using if-else. Return 'Positive' for a positive number, 'Negative' for a negative number, and 'Zero' for zero.
+Clue: Look up the Math function that returns the sign of a number
+*/
+
+/*
+3. Create a program that categorizes an age input. Using a ternary operator, return 'Adult' for ages 18+ or 'Minor' otherwise.
+*/
+
+/*
+4. Use a for loop to print all the numbers from 1 to 50.
+*/
+
+/*
+5. Use a for loop to print all the numbers between 1 and 50 that are multiples of 3.
+*/
+
+/*
+6. Use a for loop that finds the sum of all even numbers between 1 and 100.
+*/
+
+/*
+7. Use a for loop from 1 - 50;
+    - Print "Fizz" if divisible by 3
+    - Print "Buzz" if divisible by 5
+    - Print "FizzBuzz" if divisible by both
+    - Otherwise, print the number
+*/
+
+/*
+8. Create a program that validates a year if it's a leap year or not.
+*/
+
+/*
+9. Using a switch-case statement, write a program that takes a score (0 - 100) and prints:
+    - "A" if score is >= 90
+    - "B" if score is 80 - 89
+    - "C" if score is 70 - 79
+    - "D" if score is 60 - 69
+    - "F" if below 60
+*/
+
+/*
+10. Write a program using a for loop that counts how many vowels are in a given string.
+*/
+
+/*
+11. Palindrome Checker - A palindrome is a word, phrase, number, or sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
+
+Write a program that checks if a word is a palindrome.
+
+Some palindrome words: 
+    - "madam"
+    - "racecar"
+    - "A man, a plan, a canal, Panama"
+    - "Never odd or even"
+    - 121
+    - 1331
+    - 12321
+*/
+
+/*
+12. Print a reverse countdown from 10 to 1.
+*/
+
+/*
+13. Write a program that finds the factorial of a number using a for loop.
+*/
+
+/*
+14. Fibonacci Sequence - is a series of numbers where each number is the sum of the two numbers before it. It usually starts with 0 and 1.
+
+Write a program that prints the Fibonacci sequence up to 10 terms.
+Expected output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+Clue:
+    - Use a for loop
+    - Declare an array with initial elements 0 and 1
+    - The corresponding values are always the SUM OF TWO NUMBERS BEFORE IT
+*/
+
+/*
+15. Using a for loop get the sum of the first 10 terms of the Fibonacci Sequence.
+*/
