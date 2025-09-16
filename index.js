@@ -850,7 +850,7 @@ Clue:
 30. Given a list of numbers [5, -2, 8, -1, 3, -7, 12], print only the positive numbers.
 */
 
-    let numbers = [5, -2, 8, -1, 3, -7, 12];
+    // let numbers = [5, -2, 8, -1, 3, -7, 12];
 
     // for (let i = 0; i < 7; i++) {
     //     if (numbers[i] > 0) {
