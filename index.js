@@ -1004,12 +1004,66 @@ Clue:
     // }
 
     // fibonacciSequence(15);
+
 /*
-
-    *
-   ***
-  *****
- *******
-*********
-
+38. Create a function that calculates BMI and returns the category (Underweight: <18.5, Normal: 18.5-24.9, Overweight: 25-29.9, Obese: ≥30). Note: Look up the formula for calculating BMI.
 */
+
+/*
+39. Using a switch-case statement, create a function that takes a number (1-7) and returns the corresponding day name.
+*/
+
+/*
+40. Using a switch-case statement, write a basic calculator function that takes two numbers and an operator (+, -, *, /) and returns the result.
+*/
+
+/*
+41. Using a switch-case statement, create a function that takes a month name and returns the number of days in that month (ignore leap years for February).
+*/
+
+/*
+42. Using a switch-case statement, write a function that takes an HTTP status code and returns a descriptive message for common codes.
+Note: Use the status codes 200, 201, 400, 401, 403, 500 only :)
+*/
+
+/*
+43. Using a switch-case statement, create a function that converts single Roman numerals (I, V, X, L, C, D, M) to their numeric values and handles basic combinations.
+*/
+
+/*
+44. Write a function that takes a traffic light color ("red", "yellow", "green") and returns the appropriate action ("Stop", "Slow down", "Go").
+*/
+
+/*
+45. Create a function that converts temperature between Celsius and Fahrenheit based on a unit parameter ("C" to "F" or "F" to "C").
+*/
+
+/*
+46. Create a function that takes three sides of a triangle and determines if it's equilateral, isosceles, scalene, or not a valid triangle.
+*/
+
+/*
+47. Using a switch-case statement, create a function that calculates your weight on different planets based on their gravity (Mercury: 0.38, Venus: 0.91, Mars: 0.38, etc.).
+*/
+
+/*
+48. Create a function that counts how many times each element appears in an array.
+*/
+
+/*
+49. Write a function that repeats each character in a string n times (e.g., "abc" with n=3 becomes "aaabbbccc").
+*/
+
+/*
+50. Write a function that finds common elements between two arrays.
+*/
+
+/*
+51. Write a function that generates a random password of specified length using different character sets.
+*/
+
+/*
+52. Using this array [1, 2, 3, 2, 4, 5, 1], create a function that finds the duplicates in an array.
+*/
+
+// Pabalikan po ng 32 and 33 :)
