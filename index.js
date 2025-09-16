@@ -748,13 +748,36 @@ Clue:
 23. Get the first 20 multiples of 3 and store them in an array. 
 */
 
+        // let multiplesOf3 = [];
+
+        // for (let i = 1; i <= 20; i++) {
+        //     multiplesOf3.push(i * 3);
+        // }
+
+        // console.log(multiplesOf3);
+
+
 /*
 24. Make a program that prints all the characters of a string.
 */
 
+        // let myString = "Hello World";
+
+        // for (let i = 0; i < myString.length; i++) {
+        //     console.log(myString[i]);
+        // }
+
+
 /*
 25. Make a program that prints all the characters of a string in reverse.
 */
+
+        // let myString2 = "Hello World";
+
+        // for (let i = myString2.length - 1; i >= 0; i--) {
+        //     console.log(myString2[i]);
+        // }
+
 
 /*
 26. Find the largest digit in a number.
@@ -767,13 +790,44 @@ Clue:
     - For loop ka na, compare mo si current digit [i] dun sa nasa unahan niya [i + 1] :)
 */
 
+    // function largestNum (num) {
+    //     let numString = num.toString();
+    //     let separateNum = numString.split('');
+    //     let largeNum;
+
+    //     for (let i = 0; i < separateNum.length; i++) {
+    //         if (separateNum[i] > separateNum[i+1]) {
+    //             largeNum = separateNum[i];
+    //         }
+ 
+    //     }
+    //     return largeNum;
+    // }
+
+    
+    // console.log(largestNum(83762));
+
+
 /*
 27. Print numbers from 5 to 50, increasing by 5 each time.
 */
 
+        // let multiplesOf5 = [];
+
+        // for (let i = 5; i <= 50; i+=5) {
+        //     multiplesOf5.push(i);
+        // }
+
+        // console.log(multiplesOf5);
+
+
 /*
 28. Print the squares of numbers from 6 to 10.
 */
+
+        // for (let i = 6; i <= 10; i++) {
+        //     console.log(Math.pow(i,2))
+        // }
 
 /*
 29. Print this pattern of stars using for loop:
@@ -786,13 +840,43 @@ Clue:
 
 */
 
+    // for (let i = 1; i < 6; i++) {
+    //     let char = '*';
+    //     console.log(char.repeat(i));
+    // }
+
+
 /*
 30. Given a list of numbers [5, -2, 8, -1, 3, -7, 12], print only the positive numbers.
 */
 
-/*
-31. Count how many grades in the list [85, 92, 78, 96, 88, 73, 89] are above 80.
-*/
+    let numbers = [5, -2, 8, -1, 3, -7, 12];
+
+    // for (let i = 0; i < 7; i++) {
+    //     if (numbers[i] > 0) {
+    //         console.log(numbers[i]);
+    //     }
+    // }
+
+    // for (let i = 0; i < numbers.length - 1; i++) {
+    //     if (Math.sign(numbers[i]) == 1) {
+    //         console.log(numbers[i]);
+    //     }
+    // }
+
+
+// 31. Count how many grades in the list are above 80.
+
+    // let grades = [85, 92, 78, 96, 88, 73, 89];
+    // let count = 0;
+
+    // for (let i = 0; i < grades.length; i++) {
+    //     if (grades[i] > 80) {
+    //         count++;
+    //     }
+    // }
+
+    // console.log(count);
 
 /*
 32. Create a simple password strength checker that counts how many of these criteria a password meets:
@@ -804,6 +888,24 @@ Clue:
     Clue: Gawa ka ng three variables with boolean values if satisfied lahat ng conditions, print mo lang 'Strong password' if di naman, print mo lang yung criteria na di na-meet :)
 */
 
+// 32. Password strength checker
+
+        // function passwordChecker(password) {
+        //     let isEnough = password.length >= 8;
+        //     let withUppercase = password.test(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z);
+        //     let withLowercase = password.test(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z);
+        //     let withNumber = password.test(password > 0);
+
+        //     if (isEnough == true && withUppercase == true && withLowercase == true && withNumber == true) {
+        //         console.log('Strong password');
+        //     } else if (isEnough == false && withUppercase == false && withLowercase == false && withNumber == false) {
+        //         console.log('Type another password')
+        //     }
+        // }
+
+        // passwordChecker(Anselle12)
+    
+
 /*
 33. Convert a list of temperatures from Celsius to Fahrenheit: [0, 10, 20, 30, 40]. Add a condition to mark temperatures above 32°F as "Hot", below 0°F as "Freezing", and others as "Moderate".
 */
@@ -811,6 +913,28 @@ Clue:
 /*
 34. Count how many consonants are in the string "Hello World Programming".
 */
+
+    // function countConsonants(str) {
+    //     str = str.toLowerCase();
+
+    //     const consonants = [ 'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'];
+
+    //     let counter = 0;
+        
+    //     for (let i = 0; i <= str.length - 1; i++) {
+            
+    //         for (let j = 0; j <= consonants.length - 1; j++) {
+    //             if (str[i] == consonants[j]) {
+    //                 counter++;  
+    //             }
+    //         }
+            
+    //     }
+    //     return counter;
+    // }
+    
+    // console.log(countConsonants("Hello World Programming")); 
+
 
 /*
 35. Given a list of ages [12, 25, 17, 45, 8, 33, 16], categorize and count them:
@@ -820,10 +944,72 @@ Clue:
     Adults: 18+
 */
 
+    // const ages = [12, 25, 17, 45, 8, 33, 16];
+    // let ageCategory = [];
+
+    // for (let i = 0; i < ages.length; i++) {
+    //     let age = ages[i];
+
+    //     if (age < 13) {
+    //         ageCategory.push("Children");
+    //     } else if (age >= 13 && age <= 17) {
+    //         ageCategory.push("Teens");
+    //     } else if (age >= 18) {
+    //         ageCategory.push("Adults");
+    //     } else {
+    //         ageCategory.push("Not in the Category");
+    //     }
+    // }
+
+    // console.log (ageCategory);
 /*
 36. From the list ["cat", "elephant", "dog", "butterfly", "ant"], print only words longer than 4 characters.
 */
 
+    // let words = ["cat", "elephant", "dog", "butterfly", "ant"];
+    // let newWords = [];
+
+    // for (let i = 0; i < words.length; i++) {
+    //     if (words[i].length > 4) {
+    //         newWords.push(words[i]);
+    //     }
+    // }
+
+    // console.log(newWords);
+
 /*
 37. Generate the first 15 Fibonacci numbers, but only print the even ones.
+*/
+
+    // function fibonacciSequence(n) {
+    //     let fib = [];
+
+    //     for (let i = 0; i < n; i++) {
+    //         if (i == 0 || i == 1) {
+    //             fib.push(i);
+    //         } else {
+    //             fib.push(fib[i - 2] + fib[i - 1]);
+    //         }
+    //     }
+
+    //     let evenFib = [];
+
+    //     for (let i = 0; i < fib.length; i++) {
+    //         if (fib[i] % 2 == 0) {
+    //             evenFib.push(fib[i]);
+    //         }
+    //     }
+
+    //     console.log(evenFib);
+    // }
+
+    // fibonacciSequence(15);
+/*
+
+    *
+   ***
+  *****
+ *******
+*********
+
 */
