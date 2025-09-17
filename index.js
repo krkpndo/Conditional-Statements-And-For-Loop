@@ -888,27 +888,108 @@ Clue:
     Clue: Gawa ka ng three variables with boolean values if satisfied lahat ng conditions, print mo lang 'Strong password' if di naman, print mo lang yung criteria na di na-meet :)
 */
 
-// 32. Password strength checker
+/*
 
-        // function passwordChecker(password) {
-        //     let isEnough = password.length >= 8;
-        //     let withUppercase = password.test(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z);
-        //     let withLowercase = password.test(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z);
-        //     let withNumber = password.test(password > 0);
+        function passwordChecker(password) {
+        let isEnough = password.length >= 8;
+        let withUppercase = /[A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z]/.test(password);
+        let withLowercase = /[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]/.test(password);
+        let withNumber = /[0,1,2,3,4,5,6,7,8,9]/.test(password);
 
-        //     if (isEnough == true && withUppercase == true && withLowercase == true && withNumber == true) {
-        //         console.log('Strong password');
-        //     } else if (isEnough == false && withUppercase == false && withLowercase == false && withNumber == false) {
-        //         console.log('Type another password')
-        //     }
-        // }
+            if (isEnough && withUppercase && withLowercase && withNumber) {
+                console.log("Strong password!");
+            } else {
+                console.log("Weak password. Here's what's missing:");
 
-        // passwordChecker(Anselle12)
+                if (isEnough) {
+                    console.log("- Password should be at least 8 characters long");
+                }
+                if (withUppercase) {
+                    console.log("- Password should have at least one uppercase letter");
+                }
+                if (withLowercase) {
+                    console.log("- Password should have at least one lowercase letter");
+                }
+                if (withNumber) {
+                    console.log("- Password should have at least one number");
+                }
+            }
+    }
+
+    passwordChecker("Anselle12");
+
+*/
+
+
+/*
+
+    // Shortcut Method
     
+        function passwordChecker(password) {
+
+        let hasUpperCase = /[A-Z]/.test(password);
+        let hasLowerCase = /[a-z]/.test(password);
+        let hasDigits = /[0-9]/.test(password);
+
+        let isStrongPassword = hasUpperCase && hasLowerCase && hasDigits;
+        let feedback = 'Weak Password: ';
+
+        if (isStrongPassword && password.length >= 8) {
+            return 'Strong Password';
+        } else  {
+            if (password.length < 8) {
+                feedback += 'Password too short. '
+            } 
+
+            if (!hasUpperCase) {
+                feedback += 'No uppercase letter. ';
+            }
+
+            if (!hasLowerCase) {
+                feedback += 'No lowercase letter. ';
+            }
+
+            if (!hasDigits) {
+                feedback += 'No digits';
+            }
+
+            return feedback;
+        }
+
+    }
+    console.log(passwordChecker("Kirk"));
+
+
+*/
+
 
 /*
 33. Convert a list of temperatures from Celsius to Fahrenheit: [0, 10, 20, 30, 40]. Add a condition to mark temperatures above 32°F as "Hot", below 0°F as "Freezing", and others as "Moderate".
 */
+
+    // const list = [0, 10, 20, 30, 40];
+    // const newList = [];
+
+    // function celsiusToF(celsiusList) {
+    //     for (let i = 0; i < celsiusList.length; i++) {
+    //         let celsius = celsiusList[i];
+    //         let fahrenheit = (celsius * 9/5) + 32;
+    //         let stat;
+
+    //         if (fahrenheit > 32) {
+    //             stat = "Hot";
+    //         } else if (fahrenheit < 0) {
+    //             stat = "Freezing";
+    //         } else {
+    //             stat = "Moderate";
+    //         }
+
+    //         newList.push(celsius + "°C = " + fahrenheit + "°F is " + stat);
+    //     }
+    // }   
+
+    // celsiusToF(list);
+    // console.log(newList);
 
 /*
 34. Count how many consonants are in the string "Hello World Programming".
@@ -1006,64 +1087,389 @@ Clue:
     // fibonacciSequence(15);
 
 /*
-38. Create a function that calculates BMI and returns the category (Underweight: <18.5, Normal: 18.5-24.9, Overweight: 25-29.9, Obese: ≥30). Note: Look up the formula for calculating BMI.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
+
+/*
+38. Create a function that calculates BMI and returns the category (Underweight: <18.5, Normal: 18.5-24.9, Overweight: 25-29.9, Obese: ≥30). Note: Look up the formula for calculating BMI.
+    BMI = Weight (in Kg) / Height (in m)
+
+*/
+
+    // function calculateBMI (weight, height) {
+    //     let resultBMI = (weight) / (height)**2
+
+    //     if (resultBMI < 18.5) {
+    //         return 'Underweight';
+    //     } else if (resultBMI >= 18.5 && resultBMI <= 24.9) {
+    //         return 'Normal';
+    //     } else if (resultBMI >= 25 && resultBMI <= 29.9) {
+    //         return 'Overweight'
+    //     } else (resultBMI >= 30)
+    //         return 'Obese';
+    // }
+
+    // console.log(calculateBMI(53, 1.56));
 
 /*
 39. Using a switch-case statement, create a function that takes a number (1-7) and returns the corresponding day name.
 */
 
+    // function getDayName(dayNumber) {
+    //     let dayName;
+
+    //     switch(dayNumber) {
+    //         case 1:
+    //             dayName = "Sunday";
+    //             break;
+    //         case 2:
+    //             dayName = "Monday";
+    //             break;
+    //         case 3:
+    //             dayName = "Tuesday";
+    //             break;
+    //         case 4:
+    //             dayName = "Wednesday";
+    //             break;
+    //         case 5:
+    //             dayName = "Thursday";
+    //             break;
+    //         case 6:
+    //             dayName = "Friday";
+    //             break;
+    //         case 7:
+    //             dayName = "Saturday";
+    //             break;
+    //     }
+
+    //     return dayName;
+    // }
+
+    // console.log(getDayName(2));
+
 /*
 40. Using a switch-case statement, write a basic calculator function that takes two numbers and an operator (+, -, *, /) and returns the result.
 */
 
+    // function calculator(num1, num2, operator) {
+    //     let result;
+
+    //     switch (operator) {
+    //         case '+':
+    //             result = num1 + num2;
+    //             break;
+    //         case '-':
+    //             result = num1 - num2;
+    //             break;
+    //         case '*':
+    //             result = num1 * num2;
+    //             break;
+    //         case '/':
+    //             result = num1 / num2;
+    //             break;
+    //     }
+
+    //     return result;
+    // }
+
+    // console.log(calculator(10, 5, '*'));
+
+
 /*
 41. Using a switch-case statement, create a function that takes a month name and returns the number of days in that month (ignore leap years for February).
 */
+
+    // function getDaysInMonth(month) {
+    // let days;
+
+    // switch (month.toLowerCase()) {
+    //     case "january":
+    //     case "march":
+    //     case "may":
+    //     case "july":
+    //     case "august":
+    //     case "october":
+    //     case "december":
+    //         days = 31;
+    //         break;
+
+    //     case "april":
+    //     case "june":
+    //     case "september":
+    //     case "november":
+    //         days = 30;
+    //         break;
+
+    //     case "february":
+    //         days = 28;
+    //         break;
+    //     }
+
+    //     return days;
+    // }
+
+    // console.log(getDaysInMonth("February"));
 
 /*
 42. Using a switch-case statement, write a function that takes an HTTP status code and returns a descriptive message for common codes.
 Note: Use the status codes 200, 201, 400, 401, 403, 500 only :)
 */
 
+// function checkStatusMessage(statusCode) {
+//     let response;
+
+//     switch (statusCode) {
+//         case 200:
+//             response =  'Success';
+//             break;
+//         case 201:
+//             response = 'Created';
+//             break;
+//         case 400:
+//             response = 'Bad Request';
+//             break;
+//         case 401:
+//             response = 'Unauthorized';
+//             break;
+//         case 403:
+//             response = 'Forbidden';
+//             break;
+//         case 500:
+//             response = 'Internal Server Error';
+//             break;
+//         case 404:
+//             response = 'Not Found';
+//             break;
+//     }
+//     return response;
+// } 
+
+// console.log(checkStatusMessage(404));
+
+
 /*
 43. Using a switch-case statement, create a function that converts single Roman numerals (I, V, X, L, C, D, M) to their numeric values and handles basic combinations.
 */
+
+    // function romanNumerals (combination) {
+    //     let value;
+
+    //     switch (combination) {
+    //         case 'I':
+    //             value = 1;
+    //             break;
+    //         case 'V':
+    //             value = 5;
+    //             break;
+    //         case 'X':
+    //             value = 10;
+    //             break;
+    //         case 'L':
+    //             value = 50;
+    //             break;
+    //         case 'C':
+    //             value = 100;
+    //             break;
+    //         case 'D':
+    //             value = 500;
+    //             break;
+    //         case 'M':
+    //             value = 1000;
+    //             break;
+
+    //     }
+    //     return value;
+    // }
+
+    // console.log(romanNumerals('I'));
 
 /*
 44. Write a function that takes a traffic light color ("red", "yellow", "green") and returns the appropriate action ("Stop", "Slow down", "Go").
 */
 
+    // function trafficLight(color) {
+        
+    //     if (color == "red") {
+    //         return "Stop";
+    //     } else if (color == "yellow") {
+    //         return "Slow down";
+    //     } else if (color == "green") {
+    //         return "Go";
+    //     } else {
+    //         return "Invalid color";
+    //         }
+    //     }
+
+    // console.log(trafficLight("yellow"));
+
+
 /*
 45. Create a function that converts temperature between Celsius and Fahrenheit based on a unit parameter ("C" to "F" or "F" to "C").
 */
+
+    // function convertTemperature(value, unit) {
+    //     let result;
+
+    //     if (unit == "C") {
+    //         result = (value * 9/5) + 32;
+    //         return value + "°C = " + result + "°F";
+    //     } else if (unit == "F") {
+    //         result = (value - 32) * 5/9;
+    //         return value + "°F = " + result + "°C";
+    //     }
+    // }
+
+    // console.log(convertTemperature(12, "F"));
 
 /*
 46. Create a function that takes three sides of a triangle and determines if it's equilateral, isosceles, scalene, or not a valid triangle.
 */
 
+    // function identifyTriangle(s1, s2, s3) {
+
+    //     if (s1 == s2 && s2 == s3 && s3 == s1) {
+    //         return "Equilateral triangle";
+    //     }
+
+    //     else if (s1 == s2) {
+    //         return "Isosceles triangle";
+            
+    //     } else if (s1 != s2 && s2 != s3 && s3 != s1) {
+    //          return "Scalene triangle";
+
+    //     } else {
+    //         return "Not a valid triangle";
+    //     }
+    // }
+
+    // console.log(identifyTriangle(3, 2, 1));
+
 /*
 47. Using a switch-case statement, create a function that calculates your weight on different planets based on their gravity (Mercury: 0.38, Venus: 0.91, Mars: 0.38, etc.).
 */
+
+    // function weightOnPlanet(earthWeight, planet) {
+    //     let weight;
+
+    //     switch (planet) {
+    //         case "Mercury":
+    //             weight = earthWeight * 0.38;
+    //             break;
+    //         case "Venus":
+    //             weight = earthWeight * 0.91;
+    //             break;
+    //         case "Mars":
+    //             weight = earthWeight * 0.38;
+    //             break;
+    //         case "Jupiter":
+    //             weight = earthWeight * 2.34;
+    //             break;
+    //         case "Saturn":
+    //             weight = earthWeight * 1.06;
+    //             break;
+    //         case "Uranus":
+    //             weight = earthWeight * 0.92;
+    //             break;
+    //         case "Neptune":
+    //             weight = earthWeight * 1.19;
+    //             break;
+    //     }
+
+    //     return `Your weight on ${planet} is ${weight.toFixed(2)} kg`;
+    // }
+
+    // console.log(weightOnPlanet(76, "Mercury"));
 
 /*
 48. Create a function that counts how many times each element appears in an array.
 */
 
+
 /*
 49. Write a function that repeats each character in a string n times (e.g., "abc" with n=3 becomes "aaabbbccc").
 */
+
+    // function repeatLetters(str, n) {
+    //     let result = "";
+
+    //     for (let i = 0; i < str.length; i++) {
+    //         result += str[i].repeat(n);
+    //     }
+    //     return result;
+    // }
+
+    // console.log(repeatLetters('anselle', 3));
+
 
 /*
 50. Write a function that finds common elements between two arrays.
 */
 
+    // function checkCommon (arr1, arr2) {
+    //     let common = [];
+
+    //     for (let i = 0; i < arr1.length; i++) {
+    //         if (arr2.includes(arr1[i]) && !common.includes(arr1[i])) {
+    //             common.push(arr1[i]);
+    //         }
+    //     }
+    //     return common;
+    // }
+
+    // const arr1 = [1, 2, 3, 4, 5, 6, 8, 9];
+    // const arr2 = [3, 4, 5, 6, 7, 8];
+
+    // console.log(checkCommon(arr1, arr2));
+
 /*
 51. Write a function that generates a random password of specified length using different character sets.
 */
+
+    // function randomPassword(length) {
+    //     const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    //     const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    //     const numbers = "0123456789";
+
+    //     const combiPass = uppercaseLetters + lowercaseLetters + numbers;
+
+    //     let password = "";
+
+    //     for (let i = 0; i < length; i++) {
+    //         const random = Math.floor(Math.random() * combiPass.length);
+    //         password += combiPass[random];
+    //     }
+
+    //     return password;
+    // }
+
+    // console.log(randomPassword(32));
+
 
 /*
 52. Using this array [1, 2, 3, 2, 4, 5, 1], create a function that finds the duplicates in an array.
 */
 
-// Pabalikan po ng 32 and 33 :)
+    // function findDuplicate(arr) {
+    //     let duplicates = [];
+
+    //     for (let i = 0; i < arr.length; i++) {
+            
+    //         for (let j = 0; j < arr.length; j++) {
+
+    //             if (i != arr.indexOf(arr[i])) {
+
+    //                 if (arr[i] == arr[j] && !duplicates.includes(arr[i])) {
+    //                     duplicates.push(arr[i]);
+    //                 }
+
+    //             } else {
+    //                 continue;
+    //             }   
+    //         }
+    //     }
+    //     return duplicates;
+    // }
+
+    // console.log(findDuplicate([1, 2, 3, 2, 1, 3, 4, 5, 1,]));
+
+// Pabalikan po ng 32 and 33 :), ayaw po
